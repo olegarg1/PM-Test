@@ -1,3 +1,11 @@
+import MainNav from "./MainNav";
+import TopBar from "./TopBar";
+
 export default function Header() {
-  return <div>Header</div>;
+  return (
+    <header className="w-full bg-white">
+      <TopBar />
+      <MainNav />
+    </header>
+  );
 }
