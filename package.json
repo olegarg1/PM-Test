@@ -3,13 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3001",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "format": "prettier --write .",
-    "format:check": "prettier --check .",
-    "prepare": "husky install"
+    "format:check": "prettier --check ."
   },
   "dependencies": {
     "@types/node": "^24.10.1",
@@ -25,7 +24,6 @@
     "prettier": "^3.7.4",
     "react": "^19.2.1",
     "react-dom": "^19.2.1",
-    "tailwindcss": "^4.1.17",
     "typescript": "^5.9.3"
   },
   "lint-staged": {
@@ -38,7 +36,8 @@
     ]
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.1.17",
-    "postcss-load-config": "^6.0.1"
+    "postcss-load-config": "^6.0.1",
+    "tailwindcss": "3.4.1",
+    "tailwindcss-animate": "^1.0.7"
   }
 }

@@ -10,7 +10,14 @@ const config: Config = {
     extend: {
       colors: {
         background: "var(--background)",
-        foreground: "var(--foreground)",
+        text: "var(--text-color)",
+        red: "var(--red)",
+        "gray-border": "var(--gray-border)",
+        "gray-divider": "var(--gray-divider)",
+      },
+      maxWidth: {
+        header: "var(--max-width-header)",
+        content: "var(--max-width-content)",
       },
       typography: {
         DEFAULT: {
