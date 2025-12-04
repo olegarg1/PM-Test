@@ -1,5 +1,13 @@
+import Header from "@/components/header/Header";
 import type { Metadata } from "next";
+import { Urbanist } from "next/font/google";
 import "./globals.css";
+
+const urbanist = Urbanist({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-urbanist",
+});
 
 export const metadata: Metadata = {
   title: "PM-Test",
@@ -13,7 +21,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body>{children}</body>
+      <body className={urbanist.variable}>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
