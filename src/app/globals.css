@@ -5,27 +5,85 @@
 @layer base {
   :root {
     --background: #ffffff;
-    --foreground: #171717;
+    --text-color: #151515;
+    --red: #ed1d25;
+    --gray-border: #c9c9c9;
+    --gray-divider: #d6d6d6;
+    --max-width-header: 1340px;
+    --max-width-content: 1280px;
   }
 
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --background: #0a0a0a;
-      --foreground: #ededed;
-    }
+  * {
+    font-family: var(--font-urbanist), sans-serif;
+  }
+
+  html {
+    font-size: 16px;
   }
 
   body {
-    color: var(--foreground);
+    margin: 0;
+    color: var(--text-color);
     background: var(--background);
+    font-weight: 400;
     font-feature-settings:
       "rlig" 1,
       "calt" 1;
+  }
+
+  a {
+    color: var(--text-color);
+    text-decoration: none;
+  }
+
+  .topbar-link-hover:hover::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: var(--red);
+    z-index: 20;
   }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@layer components {
+  .container-header {
+    max-width: calc(var(--max-width-header));
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .container-content {
+    max-width: calc(var(--max-width-content));
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @media (max-width: 1023px) {
+    .container-header {
+      max-width: calc(var(--max-width-header));
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+
+    .container-content {
+      max-width: calc(var(--max-width-content));
+      padding-left: 12px;
+      padding-right: 12px;
+    }
   }
 }
