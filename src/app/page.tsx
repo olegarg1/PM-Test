@@ -1,10 +1,9 @@
+import Hero from "@/components/hero/Hero";
+
 export default function Home() {
   return (
     <main>
-      <div className="container-content">
-        <h1>Welcome to PM-Test</h1>
-        <p>Next.js App Router with TypeScript and Tailwind CSS</p>
-      </div>
+      <Hero />
     </main>
   );
 }
