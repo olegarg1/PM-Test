@@ -19,6 +19,9 @@ const config: Config = {
         header: "var(--max-width-header)",
         content: "var(--max-width-content)",
       },
+      fontFamily: {
+        hero: ["var(--font-hero)", "sans-serif"],
+      },
       typography: {
         DEFAULT: {
           css: {

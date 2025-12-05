@@ -1,12 +1,18 @@
 import Header from "@/components/header/Header";
 import type { Metadata } from "next";
-import { Urbanist } from "next/font/google";
+import { Outfit, Urbanist } from "next/font/google";
 import "./globals.css";
 
 const urbanist = Urbanist({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
   variable: "--font-urbanist",
+});
+
+const outfit = Outfit({
+  subsets: ["latin"],
+  weight: ["600"],
+  variable: "--font-hero",
 });
 
 export const metadata: Metadata = {
@@ -21,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={urbanist.variable}>
+      <body className={`${urbanist.variable} ${outfit.variable}`}>
         <Header />
         {children}
       </body>

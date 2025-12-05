@@ -7,6 +7,9 @@
     --background: #ffffff;
     --text-color: #151515;
     --red: #ed1d25;
+    --red-dark: #900006;
+    --red-darker: #320002;
+    --red-transparent: rgba(237, 29, 37, 0);
     --gray-border: #c9c9c9;
     --gray-divider: #d6d6d6;
     --max-width-header: 1340px;
@@ -73,7 +76,7 @@
     padding-right: 20px;
   }
 
-  @media (max-width: 1023px) {
+  @media (max-width: 638px) {
     .container-header {
       max-width: calc(var(--max-width-header));
       padding-left: 12px;
