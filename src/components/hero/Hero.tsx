@@ -1,10 +1,11 @@
 import Image from "next/image";
+import MarketsOverview from "../markets-overview/MarketsOverview";
 import HeroCurve from "./HeroCurve";
 
 export default function Hero() {
   return (
     <section
-      className="relative w-full pt-20 pb-40 overflow-hidden"
+      className="relative w-full pt-20 pb-[200px] lg:pb-[250px] overflow-hidden"
       style={{
         background: `linear-gradient(270.43deg, var(--red) 4.8%, var(--red-transparent) 103.15%), linear-gradient(102.87deg, var(--red-darker) -27.78%, var(--red-dark) 2.52%)`,
       }}
@@ -62,8 +63,10 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* CURVE OVERLAY */}
-      <HeroCurve />
+      {/* CURVE OVERLAY WITH MARKETS */}
+      <HeroCurve>
+        <MarketsOverview />
+      </HeroCurve>
     </section>
   );
 }
