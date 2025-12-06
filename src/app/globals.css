@@ -16,10 +16,6 @@
     --max-width-content: 1280px;
   }
 
-  * {
-    font-family: var(--font-urbanist), sans-serif;
-  }
-
   html {
     font-size: 16px;
   }
@@ -28,6 +24,7 @@
     margin: 0;
     color: var(--text-color);
     background: var(--background);
+    font-family: var(--font-urbanist), sans-serif;
     font-weight: 400;
     font-feature-settings:
       "rlig" 1,
@@ -54,6 +51,15 @@
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
   }
 }
 

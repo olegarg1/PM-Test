@@ -21,6 +21,7 @@ const config: Config = {
       },
       fontFamily: {
         hero: ["var(--font-hero)", "sans-serif"],
+        inter: ["var(--font-inter)", "sans-serif"],
       },
       typography: {
         DEFAULT: {
