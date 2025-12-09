@@ -1,25 +1,7 @@
 import Header from "@/components/header/Header";
+import { inter, outfit, urbanist } from "@/lib/fonts";
 import type { Metadata } from "next";
-import { Inter, Outfit, Urbanist } from "next/font/google";
 import "./globals.css";
-
-const urbanist = Urbanist({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-urbanist",
-});
-
-const outfit = Outfit({
-  subsets: ["latin"],
-  weight: ["600"],
-  variable: "--font-hero",
-});
-
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["700"],
-  variable: "--font-inter",
-});
 
 export const metadata: Metadata = {
   title: "PM-Test",

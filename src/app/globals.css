@@ -7,9 +7,20 @@
     --background: #ffffff;
     --text-color: #151515;
     --red: #ed1d25;
+    --red-light: #ffe6e7;
+    --red-pink: #ff9595;
+    --red-border-secure-start: #ff787d;
+    --red-border-secure-end: var(--red);
     --red-dark: #900006;
     --red-darker: #320002;
+    --red-pill-start: var(--red-dark);
+    --red-pill-end: #730307;
+    --red-pill-spreads-start: #6f0307;
+    --red-pill-spreads-end: #880205;
+    --red-pill-secure-start: #800800;
+    --red-pill-secure-end: #9b0c11;
     --red-transparent: rgba(237, 29, 37, 0);
+    --text-color-opacity-15: rgba(21, 21, 21, 0.15);
     --gray-border: #c9c9c9;
     --gray-divider: #d6d6d6;
     --max-width-header: 1340px;
@@ -64,35 +75,31 @@
 }
 
 @layer components {
+  .send-icon-button {
+    color: var(--text-color-opacity-15);
+  }
+
+  .group:hover .send-icon-button {
+    color: var(--red);
+  }
+
+  .container-base {
+    @apply mx-auto w-full px-5;
+  }
+
   .container-header {
-    max-width: calc(var(--max-width-header));
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    padding-left: 20px;
-    padding-right: 20px;
+    @apply container-base;
+    max-width: var(--max-width-header);
   }
 
   .container-content {
-    max-width: calc(var(--max-width-content));
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    padding-left: 20px;
-    padding-right: 20px;
+    @apply container-base;
+    max-width: var(--max-width-content);
   }
 
   @media (max-width: 638px) {
-    .container-header {
-      max-width: calc(var(--max-width-header));
-      padding-left: 12px;
-      padding-right: 12px;
-    }
-
-    .container-content {
-      max-width: calc(var(--max-width-content));
-      padding-left: 12px;
-      padding-right: 12px;
+    .container-base {
+      @apply px-3;
     }
   }
 }

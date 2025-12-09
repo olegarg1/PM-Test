@@ -6,7 +6,7 @@ export default function MarketsOverview() {
     <div className="w-full py-6 pt-8">
       <div className="container-content">
         {/* Horizontal Scroll Container */}
-        <div className="overflow-x-auto scrollbar-hide -mx-4 px-4 pb-[2px]">
+        <div className="overflow-x-auto scrollbar-hide -mx-4 px-4 pb-[10px]">
           <div className="flex gap-6 lg:gap-8">
             {marketItems.map((market) => (
               <div
